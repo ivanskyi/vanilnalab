@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-product-navbar',
@@ -9,9 +10,15 @@ import { Router } from '@angular/router';
 export class ProductNavbarComponent implements OnInit {
   activeCategory: string = '';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.setActiveCategoryFromUrl();
+      });
+
     this.setActiveCategoryFromUrl();
   }
 
@@ -20,17 +27,8 @@ export class ProductNavbarComponent implements OnInit {
   }
 
   private setActiveCategoryFromUrl(): void {
-    const url = this.router.url;
-    if (url.includes('/products/cakes')) {
-      this.activeCategory = 'cakes';
-    } else if (url.includes('/products/cheesecakes')) {
-      this.activeCategory = 'cheesecakes';
-    } else if (url.includes('/products/macarons')) {
-      this.activeCategory = 'macarons';
-    } else if (url.includes('/products/kids')) {
-      this.activeCategory = 'kids';
-    } else if (url.includes('/products/bento')) {
-      this.activeCategory = 'bento';
-    }
+    const path = this.router.url.split('?')[0];
+    const categoryMatch = path.match(/\/products\/([^\/]+)/);
+    this.activeCategory = categoryMatch ? categoryMatch[1] : '';
   }
 }

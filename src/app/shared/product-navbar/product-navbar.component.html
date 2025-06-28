@@ -2,7 +2,11 @@
   <div class="navbar-container">
     <ul class="nav-items">
       <li class="nav-item">
-        <a href="/products/cakes" class="nav-link" [class.active]="activeCategory === 'cakes'" (click)="setActiveCategory('cakes')">
+        <a routerLink="/products/cakes"
+           class="nav-link"
+           [routerLinkActive]="'active'"
+           [routerLinkActiveOptions]="{ exact: true }"
+           (click)="setActiveCategory('cakes')">
           <div class="nav-icon">🎂</div>
           <span class="nav-text">Торти</span>
           <div class="nav-underline"></div>
@@ -10,7 +14,11 @@
       </li>
 
       <li class="nav-item">
-        <a href="/products/cheesecakes" class="nav-link" [class.active]="activeCategory === 'cheesecakes'" (click)="setActiveCategory('cheesecakes')">
+        <a routerLink="/products/cheesecakes"
+           class="nav-link"
+           [routerLinkActive]="'active'"
+           [routerLinkActiveOptions]="{ exact: true }"
+           (click)="setActiveCategory('cheesecakes')">
           <div class="nav-icon">🍰</div>
           <span class="nav-text">Чізкейки</span>
           <div class="nav-underline"></div>
@@ -18,7 +26,11 @@
       </li>
 
       <li class="nav-item">
-        <a href="/products/macarons" class="nav-link" [class.active]="activeCategory === 'macarons'" (click)="setActiveCategory('macarons')">
+        <a routerLink="/products/macarons"
+           class="nav-link"
+           [routerLinkActive]="'active'"
+           [routerLinkActiveOptions]="{ exact: true }"
+           (click)="setActiveCategory('macarons')">
           <div class="nav-icon">🍪</div>
           <span class="nav-text">Макаруни</span>
           <div class="nav-underline"></div>
@@ -26,7 +38,11 @@
       </li>
 
       <li class="nav-item">
-        <a href="/products/kids" class="nav-link" [class.active]="activeCategory === 'kids'" (click)="setActiveCategory('kids')">
+        <a routerLink="/products/kids"
+           class="nav-link"
+           [routerLinkActive]="'active'"
+           [routerLinkActiveOptions]="{ exact: true }"
+           (click)="setActiveCategory('kids')">
           <div class="nav-icon">🧁</div>
           <span class="nav-text">Для дітей</span>
           <div class="nav-underline"></div>
@@ -34,7 +50,11 @@
       </li>
 
       <li class="nav-item">
-        <a href="/products/bento" class="nav-link" [class.active]="activeCategory === 'bento'" (click)="setActiveCategory('bento')">
+        <a routerLink="/products/bento"
+           class="nav-link"
+           [routerLinkActive]="'active'"
+           [routerLinkActiveOptions]="{ exact: true }"
+           (click)="setActiveCategory('bento')">
           <div class="nav-icon">🍱</div>
           <span class="nav-text">Бенто торти</span>
           <div class="nav-underline"></div>
