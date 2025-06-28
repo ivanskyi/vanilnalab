@@ -1,0 +1,83 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="navbar-container">
+    <div class="navbar-left">
+      <div class="logo-section">
+        <div class="logo-icon">
+          <img src="assets/images/logo.png" alt="Vanilna Lab Logo" class="logo-image">
+        </div>
+        <div class="logo-content">
+          <div class="logo-text">Vanilna Lab</div>
+          <div class="logo-credit">By Kateryna Ivanska</div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-links">
+      <a routerLink="/"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: true }"
+         class="nav-link"
+         (click)="closeMobileMenu()">
+        Головна
+      </a>
+      <a routerLink="/products"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: true }"
+         class="nav-link"
+         (click)="closeMobileMenu()">
+        Продукція
+      </a>
+      <a routerLink="/about"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: true }"
+         class="nav-link"
+         (click)="closeMobileMenu()">
+        Про нас
+      </a>
+      <a routerLink="/contact"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: true }"
+         class="nav-link"
+         (click)="closeMobileMenu()">
+        Контакти
+      </a>
+    </div>
+    <button class="mobile-toggle"
+            [class.active]="isMobileMenuOpen"
+            (click)="toggleMobileMenu()"
+            aria-label="Toggle mobile menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+  <div class="mobile-menu" [class.active]="isMobileMenuOpen">
+    <a routerLink="/"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{ exact: true }"
+       class="nav-link"
+       (click)="closeMobileMenu()">
+      Головна
+    </a>
+    <a routerLink="/products"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{ exact: true }"
+       class="nav-link"
+       (click)="closeMobileMenu()">
+      Продукція
+    </a>
+    <a routerLink="/about"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{ exact: true }"
+       class="nav-link"
+       (click)="closeMobileMenu()">
+      Про нас
+    </a>
+    <a routerLink="/contact"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{ exact: true }"
+       class="nav-link"
+       (click)="closeMobileMenu()">
+      Контакти
+    </a>
+  </div>
+</nav>
