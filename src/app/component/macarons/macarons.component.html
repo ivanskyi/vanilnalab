@@ -1,0 +1,66 @@
+<app-product-navbar></app-product-navbar>
+
+
+<div class="macarons-page">
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Наші Макаруни</h1>
+      <p class="hero-subtitle">Вишукані французькі десерти з натуральними інгредієнтами</p>
+    </div>
+  </div>
+
+  <div class="macarons-grid">
+    <div class="macaron-card" *ngFor="let macaron of macarons">
+      <div class="card-image">
+        <img [src]="macaron.image" [alt]="macaron.name" class="macaron-img">
+        <div class="card-overlay">
+          <button class="order-btn">Замовити</button>
+        </div>
+      </div>
+      <div class="card-content">
+        <h3 class="macaron-name">{{ macaron.name }}</h3>
+        <p class="macaron-description">{{ macaron.description }}</p>
+        <div class="macaron-details">
+          <div class="flavor-tags">
+            <span class="flavor-tag" *ngFor="let flavor of macaron.flavors">{{ flavor }}</span>
+          </div>
+          <div class="price-section">
+            <span class="price">{{ macaron.price }} грн</span>
+            <span class="unit">за штуку</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <div class="info-card">
+      <div class="info-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      </div>
+      <h3>Натуральні Інгредієнти</h3>
+      <p>Тільки найкращі натуральні інгредієнти у виробництві наших макаронів</p>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      </div>
+      <h3>Преміум Якість</h3>
+      <p>Кожен макарон виготовляється вручну з дотриманням французьких традицій</p>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 7h-2V6a3 3 0 0 0-6 0v1H9a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10.91 16.91a1 1 0 0 1-1.42-1.42A5 5 0 0 1 12 14a5 5 0 0 1 2.51 1.49 1 1 0 0 1-1.42 1.42A3 3 0 0 0 12 16a3 3 0 0 0-1.09.91z"/>
+        </svg>
+      </div>
+      <h3>Свіжість</h3>
+      <p>Виготовляємо щодня для забезпечення максимальної свіжості та смаку</p>
+    </div>
+  </div>
+</div>
+

@@ -13,11 +13,12 @@ $gradient-main: linear-gradient(135deg, $primary-pink 0%, $accent-purple 100%);
 $gradient-light: linear-gradient(135deg, $secondary-pink 0%, $cream 100%);
 
 .product-navbar {
+  position: sticky;
   background: $gradient-light;
   border-bottom: 3px solid $primary-pink;
   box-shadow: $shadow-soft;
   position: sticky;
-  top: 0;
+  top: 75;
   z-index: 100;
   backdrop-filter: blur(10px);
 
