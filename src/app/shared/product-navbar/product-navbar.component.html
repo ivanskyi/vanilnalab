@@ -1,0 +1,45 @@
+<nav class="product-navbar">
+  <div class="navbar-container">
+    <ul class="nav-items">
+      <li class="nav-item">
+        <a href="/products/cakes" class="nav-link" [class.active]="activeCategory === 'cakes'" (click)="setActiveCategory('cakes')">
+          <div class="nav-icon">🎂</div>
+          <span class="nav-text">Торти</span>
+          <div class="nav-underline"></div>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="/products/cheesecakes" class="nav-link" [class.active]="activeCategory === 'cheesecakes'" (click)="setActiveCategory('cheesecakes')">
+          <div class="nav-icon">🍰</div>
+          <span class="nav-text">Чізкейки</span>
+          <div class="nav-underline"></div>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="/products/macarons" class="nav-link" [class.active]="activeCategory === 'macarons'" (click)="setActiveCategory('macarons')">
+          <div class="nav-icon">🍪</div>
+          <span class="nav-text">Макаруни</span>
+          <div class="nav-underline"></div>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="/products/kids" class="nav-link" [class.active]="activeCategory === 'kids'" (click)="setActiveCategory('kids')">
+          <div class="nav-icon">🧁</div>
+          <span class="nav-text">Для дітей</span>
+          <div class="nav-underline"></div>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="/products/bento" class="nav-link" [class.active]="activeCategory === 'bento'" (click)="setActiveCategory('bento')">
+          <div class="nav-icon">🍱</div>
+          <span class="nav-text">Бенто торти</span>
+          <div class="nav-underline"></div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
